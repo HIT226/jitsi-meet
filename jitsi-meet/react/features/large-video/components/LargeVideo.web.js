@@ -8,6 +8,7 @@ import { setColorAlpha } from '../../base/util';
 import { fetchCustomBrandingData } from '../../dynamic-branding';
 import { SharedVideo } from '../../shared-video/components/web';
 import { Captions } from '../../subtitles/';
+import { Circle } from './Circle';
 
 declare var interfaceConfig: Object;
 
@@ -105,11 +106,15 @@ class LargeVideo extends Component<Props> {
                     <div
                         id = 'largeVideoWrapper'
                         role = 'figure' >
+                        <Circle size={200} horizontal={300} vertical={300}>
                         <video
                             autoPlay = { !_noAutoPlayVideo }
                             id = 'largeVideo'
                             muted = { true }
                             playsInline = { true } /* for Safari on iOS to work */ />
+                   
+   
+                    </Circle>
                     </div>
                 </div>
                 { interfaceConfig.DISABLE_TRANSCRIPTION_SUBTITLES
